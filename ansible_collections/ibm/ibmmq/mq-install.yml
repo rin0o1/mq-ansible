@@ -5,6 +5,7 @@
     PATH: /opt/mqm/bin:{{ ansible_env.PATH }}
 
   roles: 
+    - role: setupenvironment
     - role: setupusers
       vars:
         appUid: 909
@@ -15,4 +16,4 @@
       vars:
         version: 930
         downloadURL: "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/"
-    - role: installmq-linux
+    - role: installmq
